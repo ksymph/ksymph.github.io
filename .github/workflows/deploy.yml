@@ -20,7 +20,14 @@ jobs:
       - name: Setup Lua
         uses: leafo/gh-actions-lua@v10
         with:
-          luaVersion: '5.4'
+          luaVersion: '5.1'
+          luarocks: true
+          
+      - name: Install LuaFileSystem
+        run: |
+          luarocks install luafilesystem
+          # Alternative if the package isn't available:
+          # luarocks install luafilesystem
           
       - name: Build Site
         run: |
