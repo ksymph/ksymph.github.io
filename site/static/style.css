@@ -136,4 +136,7 @@ main {
 	li {
 		list-style-type: none;
 	}
+	a {
+		font-size: calc(0.8em + var(--font-size));
+	}
 }
