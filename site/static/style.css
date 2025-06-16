@@ -33,6 +33,7 @@ body {
 	max-width: 768px;
 	border: 5px solid var(--font-color);
 	width: min(768px, 90vw);
+	min-height: calc(100vh - 42px);
 }
 
 header {
@@ -52,6 +53,13 @@ h1 {
 	margin: var(--margin);
 	margin-bottom: 24px;
 	text-wrap: nowrap;
+	a {
+		color: var(--font-color);
+		text-decoration: none;
+		font-family: SourceSerifPro;
+		padding: 0;
+		margin: 0;
+	}
 }
 
 nav, #contact, #projects {
@@ -106,6 +114,8 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-between;
+	height: 100%;
 }
 
 
