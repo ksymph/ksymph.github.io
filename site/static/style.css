@@ -34,7 +34,7 @@ body {
 	border: 5px solid var(--font-color);
 	width: min(768px, 90vw);
 	min-height: calc(100vh - 42px);
-	height: 0;
+	height: fit-content;
 }
 
 header {
