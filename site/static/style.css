@@ -106,7 +106,6 @@ main {
 
 
 #projects {
-	border: 3px solid var(--font-color);
 	width: 100%;
 	max-width: 512px;
 	.showcase {
@@ -114,9 +113,13 @@ main {
 		a {
 			display: flex;
 			justify-content: space-between;
-			padding: 0;
+			padding: 1px 4px;
 			margin: 0;
-			font-size: calc(var(--font-size) * 0.8);
+			font-size: calc(0.6em + var(--font-size));
+			font-family: SourceSans, Arial, sans-serif;
+		}
+		a:hover {
+			text-decoration: none;
 		}
 	}
 }
