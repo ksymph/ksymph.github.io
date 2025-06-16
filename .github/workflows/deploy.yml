@@ -34,12 +34,12 @@ jobs:
       - name: Build Site
         run: |
           mkdir -p ./out
-          lua ./lua_ssg.lua './site/' './out'
+          lua ./tranquility/init.lua ./site
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './out'
+          path: './site/dist'
           
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
