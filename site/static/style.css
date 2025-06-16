@@ -104,10 +104,21 @@ main {
 	font-size: calc(1em + var(--font-size));
 }
 
-.showcase {
+
+#projects {
 	border: 3px solid var(--font-color);
 	width: 100%;
 	max-width: 512px;
+	.showcase {
+		width: 100%;
+		a {
+			display: flex;
+			justify-content: space-between;
+			padding: 0;
+			margin: 0;
+			font-size: calc(var(--font-size) * 0.8);
+		}
+	}
 }
 
 
