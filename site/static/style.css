@@ -32,6 +32,7 @@ body {
 	flex-direction: column;
 	max-width: 768px;
 	border: 5px solid var(--font-color);
+	width: min(768px, 90vw);
 }
 
 header {
@@ -137,6 +138,22 @@ main {
 		list-style-type: none;
 	}
 	a {
-		font-size: calc(0.8em + var(--font-size));
+		font-size: calc(0.7em + var(--font-size));
+	}
+}
+
+
+#about {
+	blockquote {
+		font-family: SourceSerifPro, serif;
+		font-size: calc(0.92em + var(--font-size));
+		margin-bottom: 4px;
+		cite {
+			margin-left: 48px;
+			font-size: calc(0.88em + var(--font-size));
+		}
+		cite::before {
+			content: "― ";
+		}
 	}
 }
