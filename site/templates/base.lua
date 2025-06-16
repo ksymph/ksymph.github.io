@@ -1,0 +1,1 @@
+return function(params) return "Hello world" end
