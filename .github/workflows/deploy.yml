@@ -1,45 +1,45 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [master]
-  workflow_dispatch:
+   push:
+      branches: [master]
+   workflow_dispatch:
 
 jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-      
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        
-      - name: install lua
-        uses: leafo/gh-actions-lua@v11
-        with:
-          luaVersion: '5.1'
+   build-deploy:
+      runs-on: ubuntu-latest
+      permissions:
+         contents: write
+         pages: write
+         id-token: write
 
-      - name: install luarocks
-        uses: leafo/gh-actions-luarocks@v5
+      steps:
+         - name: Checkout
+           uses: actions/checkout@v4
 
-      - name: install a module
-        run: luarocks install moonscript
-          
-      - name: install LuaFileSystem
-        run: luarocks install luafilesystem
-          
-      - name: Build Site
-        run: |
-          mkdir -p ./out
-          lua ./tranquility/init.lua ./site
-          
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './site/dist'
-          
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+         - name: install lua
+           uses: leafo/gh-actions-lua@v11
+           with:
+              luaVersion: "5.1"
+
+         - name: install luarocks
+           uses: leafo/gh-actions-luarocks@v5
+
+         - name: install a module
+           run: luarocks install moonscript
+
+         - name: install LuaFileSystem
+           run: luarocks install luafilesystem
+
+         - name: Build Site
+           run: |
+              mkdir -p ./out
+              lua ./tranquility/tranquility.lua ./site
+
+         - name: Upload artifact
+           uses: actions/upload-pages-artifact@v3
+           with:
+              path: "./site/dist"
+
+         - name: Deploy to GitHub Pages
+           uses: actions/deploy-pages@v4
