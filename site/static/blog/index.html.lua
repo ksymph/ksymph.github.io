@@ -33,10 +33,10 @@ return function(site)
 		if unixtime then
 			-- Transformations for index view
 			content = content:gsub("<h1>", "<header><a href=\"" .. post.url .. "\"><h2>")
-				 :gsub("</h1>", "</h2></a></header>")
+				 :gsub("</h1>", "</h2></a>")
 				 :gsub("<h2>" .. unixtime .. "</h2>",
 					 "<time datetime=\"" .. os.date("!%Y-%m-%dT%TZ", unixtime) .. "\">" ..
-					 format_date(unixtime) .. "</time>")
+					 format_date(unixtime) .. "</time></header>")
 				 :gsub("<h1>", "<h2>") -- Convert any remaining h1 to h2
 				 :gsub("</h1>", "</h2>")
 
