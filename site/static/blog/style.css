@@ -111,11 +111,13 @@ main {
 	header {
 		border-bottom: 2px solid var(--jewel-blue);
 		padding: 0px 24px 12px 24px;
+		a {
+			text-decoration: none;
+		}
 		h2 {
 			margin: 0;
 			padding-bottom: 4px;
 			color: var(--jewel-orange);
-			text-decoration: none;
 		}
 		margin-bottom: 8px;
 	}
