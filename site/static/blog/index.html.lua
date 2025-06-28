@@ -15,7 +15,7 @@ return function(site)
             <section id="site-nav">
                 <nav>
                     <a href="/blog/" id="hero" class="box button">/blog/</a>
-                    <a href="/" class="box button">Back to Moon Lemon</a>
+                    <a href="/" class="box button">Back to kwikle.me</a>
                 </nav>
             </section>
             <main>

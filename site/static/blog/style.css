@@ -115,6 +115,7 @@ main {
 			margin: 0;
 			padding-bottom: 4px;
 			color: var(--jewel-orange);
+			text-decoration: none;
 		}
 		margin-bottom: 8px;
 	}
