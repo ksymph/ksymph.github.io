@@ -1,17 +1,24 @@
 /* HOUSEKEEPING */
 
 :root {
-	--background-color: #2D2922;
-	--text-color: #E3CFB4;
+	--dark: #2D2922;
+	--light: #E3CFB4;
 
 	--accent-a: #943030;
 	--accent-b: #DB9942;
 	--accent-c: #3E6958;
+	--accent-d: #5C8B93;
+
+	--background-color: var(--dark);
+	--text-color: var(--light);
+	--link-color: var(--accent-b);
 }
 
 @media (prefers-color-scheme: light) {
 	:root {
-
+		--background-color: var(--light);
+		--text-color: var(--dark);
+		--link-color: var(--accent-c);
 	}
 }
 
@@ -40,6 +47,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	text-shadow: 0 0 4px hsl(from var(--text-color) h s l / 10%);
 }
 
 main {
@@ -57,7 +66,7 @@ p {
 }
 
 a {
-	color: var(--accent-b);
+	color: var(--link-color);
 	text-decoration: none;
 }
 a:hover {
