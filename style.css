@@ -12,6 +12,7 @@
 	--background-color: var(--dark);
 	--text-color: var(--light);
 	--link-color: var(--accent-b);
+	--highlight: hsl(from var(--text-color) h s l / 10%);
 }
 
 @media (prefers-color-scheme: light) {
@@ -48,7 +49,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 
-	text-shadow: 0 0 4px hsl(from var(--text-color) h s l / 10%);
+	text-shadow: 0 0 4px var(--highlight);
 }
 
 main {
@@ -185,7 +186,7 @@ a:hover {
 					span:first-child {
 						text-decoration: underline;
 					}
-					background-color: hsl(from var(--text-color) h s l / 15%);
+					background-color: var(--highlight);
 				}
 				span:nth-child(2) {
 					text-align: right;
