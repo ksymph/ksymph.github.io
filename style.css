@@ -15,6 +15,25 @@
 	--highlight: hsl(from var(--text-color) h s l / 10%);
 }
 
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-new(root) {
+  animation: fadeIn 0.1s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@supports not (view-transition-name: root) {
+	main {
+		animation: fadeIn 0.1s ease-out 0.1s both;
+	}
+}
+
 @media (prefers-color-scheme: light) {
 	:root {
 		--background-color: var(--light);
@@ -26,6 +45,7 @@
 @font-face {
 	font-family: "Junicode";
 	src: url("/font/junicode.woff2") format("woff2");
+	font-display: block;
 }
 
 /* /HOUSEKEEPING */
@@ -39,7 +59,7 @@ html {
 body {
 	background-color: var(--background-color);
 	color: var(--text-color);
-	font-family: "Junicode";
+	font-family: "Junicode", "Book Antiqua", Georgia, system-ui, serif;
 	font-weight: 600;
 	font-size: 1.8em;
 	height: 100%;
@@ -109,6 +129,9 @@ a:hover {
 
 
 #index {
+	.special-k {
+		animation: fadeIn 0.1s ease-out 0.1s both, rainbow 5s ease-in-out infinite;
+	}
 	#hello {
 		display: flex;
 		align-items: center;
