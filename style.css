@@ -132,6 +132,7 @@ a:hover {
 	.special-k {
 		animation: fadeIn 0.1s ease-out 0.1s both, rainbow 5s ease-in-out infinite;
 	}
+	font-size: min(1.5em, 5vw);
 	#hello {
 		display: flex;
 		align-items: center;
@@ -159,6 +160,7 @@ a:hover {
 #about {
 	margin-top: 1em;
 	height: auto;
+	font-size: min(1.5em, 3vw + 0.5em);
 	main {
 		justify-content: normal;
 		padding-bottom: 1em;
@@ -167,7 +169,8 @@ a:hover {
 
 	}
 	#content {
-		max-width: 600px;
+		width: 600px;
+		max-width: 80vw;
 		p {
 			margin: 1em 0;
 		}
@@ -180,9 +183,16 @@ a:hover {
 		li {
 			list-style-type: none;
 			font-size: 0.8em;
+			display: flex;
+			align-items: center;
 			a {
 				margin-left: 0.4em;
 				font-size: 1.25em;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				flex: 1;
+				min-width: 0;
 			}
 		}
 	}
@@ -192,10 +202,12 @@ a:hover {
 #projects {
 	margin-top: 1em;
 	height: auto;
+	font-size: min(1.5em, 3vw + 0.5em);
 
 	.showcase {
 		padding: 0;
 		width: 600px;
+		max-width: 80vw;
 		li {
 			list-style-type: none;
 			a {
