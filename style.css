@@ -1,8 +1,191 @@
+/* HOUSEKEEPING */
+
 :root {
+	--background-color: #2D2922;
+	--text-color: #E3CFB4;
 
+	--accent-a: #943030;
+	--accent-b: #DB9942;
+	--accent-c: #3E6958;
+}
 
+@media (prefers-color-scheme: light) {
+	:root {
+
+	}
+}
+
+@font-face {
+	font-family: "Junicode";
+	src: url("/font/junicode.woff2") format("woff2");
+}
+
+/* /HOUSEKEEPING */
+
+/* MISC/SHARED */
+
+html {
+	height: 100%;
 }
 
 body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: "Junicode";
+	font-weight: 600;
+	font-size: 1.8em;
+	height: 100%;
+	margin: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5em;
+}
+
+p {
+	margin: 0.2em 0;
+}
+
+a {
+	color: var(--accent-b);
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+.nav-icon {
+	line-height: 0;
+	display: block;
+}
+.icon {
+	width: 4em;
+	height: 4em;
+	transition: transform 0.8s ease;
+}
+.icon:hover {
+	transform: rotate(360deg);
+}
+
+@keyframes rainbow {
+	0%, 100% {
+		color: var(--accent-a);
+	}
+	33% {
+		color: var(--accent-b);
+	}
+	66% {
+		color: var(--accent-c);
+	}
+}
+
+.special-k {
+	color: var(--accent-a);
+	animation: rainbow 5s ease-in-out infinite;
+	font-size: 1.1em;
+}
+
+/* /MISC/SHARED */
+
+
+#index {
+	#hello {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5em;
+
+		h1 {
+			margin: 0;
+			font-size: 1.6em;
+		}
+		h2 {
+			margin: 0;
+			font-size: 1.2em;
+		}
+	}
+	nav {
+		display: flex;
+		gap: 1em;
+		font-size: 1.1em;
+		padding: 0;
+	}
+}
+
+
+#about {
+	margin-top: 1em;
+	height: auto;
+	main {
+		justify-content: normal;
+		padding-bottom: 1em;
+	}
+	.icon {
+
+	}
+	#content {
+		max-width: 600px;
+		p {
+			margin: 1em 0;
+		}
+
+
+		ul {
+			padding-left: 0.5em;
+		}
+
+		li {
+			list-style-type: none;
+			font-size: 0.8em;
+			a {
+				margin-left: 0.4em;
+				font-size: 1.25em;
+			}
+		}
+	}
+}
+
+
+#projects {
+	margin-top: 1em;
+	height: auto;
+
+	.showcase {
+		padding: 0;
+		width: 600px;
+		li {
+			list-style-type: none;
+			a {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 2em;
+				text-decoration: none;
+				padding: 4px 12px 0;
+				&:hover {
+					span:first-child {
+						text-decoration: underline;
+					}
+					background-color: hsl(from var(--text-color) h s l / 15%);
+				}
+				span:nth-child(2) {
+					text-align: right;
+					color: var(--text-color);
+				}
+			}
+
+
+		}
+	}
 
 }
