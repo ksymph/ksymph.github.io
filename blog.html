@@ -1,1 +1,33 @@
-<h1>Under construction, come back later!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ksite - blog</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="/img/icon_uncentered.svg">
+	<link rel="preload" href="/font/junicode.woff2" as="font" type="font/woff2" crossorigin>
+	<script type="speculationrules">
+	{
+		"prerender": [{
+			"urls": ["/", "/projects.html", "/blog.html", "/links.html"]
+		}]
+	}
+	</script>
+</head>
+
+<body id="blog">
+	<nav>
+		<a href="/" class="nav-icon"><img src="/img/icon.svg" alt="K's Icon" width="100" height="100" class="icon"></a>
+		<div>2025</div>
+		<ul>
+			{{nav_links}}
+		</ul>
+	</nav>
+	<main>
+		<section id="posts">
+			{{posts}}
+		</section>
+	</main>
+</body>
+</html>
