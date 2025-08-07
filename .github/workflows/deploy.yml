@@ -1,9 +1,9 @@
-name: Build Static Site
+name: deploy
 
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -19,3 +19,11 @@ jobs:
 
       - name: Run build script
         run: lua build.lua
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './public'
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
