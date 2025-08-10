@@ -52,7 +52,7 @@ do
 
 	local nav_links = ""
 	for _, post in ipairs(parsed_posts) do
-	    nav_links = nav_links .. '\t\t\t<a href="#' .. post.id .. '">' .. post.title .. '</a>\n'
+	    nav_links = nav_links .. '\t\t\t<li><a href="#' .. post.id .. '">' .. post.title .. '</a></li>\n'
 	end
 
 	local articles = ""
