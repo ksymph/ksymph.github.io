@@ -6,6 +6,7 @@ on:
       - master
 
 permissions:
+  pages: write
   id-token: write
   contents: read
 
