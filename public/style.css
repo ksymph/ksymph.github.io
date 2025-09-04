@@ -49,6 +49,12 @@
 	font-display: block;
 }
 
+@font-face {
+	font-family: "Cantarell";
+	src: url("/font/cantarell.woff2") format("woff2");
+	font-display: block;
+}
+
 /* /HOUSEKEEPING */
 
 /* MISC/SHARED */
@@ -291,6 +297,9 @@ a:hover {
 			padding-left: 1em;
 		}
 		p {
+			font-family: "Cantarell";
+			font-weight: 500;
+			font-size: 0.8em;
 			padding-left: 1em;
 			text-indent: -1em;
 		}
